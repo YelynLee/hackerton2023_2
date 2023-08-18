@@ -7,6 +7,7 @@ import SimplePage from './simplepage/SimplePage';
 import Pluspage from './pluspage/pluspage';
 import MissionPage from './missonpage/MissionPage';
 import Intro from './intro/Intro';
+import Mypage from './mypage/Mypage';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 import { useDispatch, useSelector } from 'react-redux';
@@ -46,6 +47,7 @@ function App() {
 {/* 이 Route들의 경우, 로그인 된 사람들만 이쪽으로 보내 */}
         <Route element={<ProtectedRoutes isAuth={isAuth}/>}>
           <Route path ="/missonpage" element={<MissionPage/>}/>
+          <Route path ="/mypage" element={<Mypage/>}/>
         </Route>
 
 {/* 이 Route들의 경우, 로그인 안된 사람들만 이쪽으로 보내 */}

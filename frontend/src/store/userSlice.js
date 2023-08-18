@@ -31,8 +31,8 @@ export const userSlice = createSlice({
             })
             .addCase(registerUser.rejected, (state, action) => {
                 state.isLoading = false;
-                state.error = action.payload; //상단의 initialSate의 error에 payload를 넣어줌
                 toast.error(action.payload);
+                state.error = action.payload; //상단의 initialSate의 error에 payload를 넣어줌
             })
             
         //login
@@ -41,15 +41,15 @@ export const userSlice = createSlice({
             })
             .addCase(loginUser.fulfilled, (state, action) => {
                 state.isLoading = false;
-                toast.info('로그인을 성공했습니다.');
                 state.userData = action.payload; //initialState의 userData에 payload를 넣어줌
                 state.isAuth = true; //현재 로그인 상태
                 localStorage.setItem('accessToken', action.payload.accessToken); //로그인에 성공하면 token도 넣어줌
+                toast.info('로그인을 성공했습니다.');
             })
             .addCase(loginUser.rejected, (state, action) => {
                 state.isLoading = false;
-                state.error = action.payload; //상단의 initialSate의 error에 payload를 넣어줌
                 toast.error(action.payload);
+                state.error = action.payload; //상단의 initialSate의 error에 payload를 넣어줌
             })
 
         //auth
@@ -75,17 +75,17 @@ export const userSlice = createSlice({
             })
             .addCase(logoutUser.fulfilled, (state, action) => {
                 state.isLoading = false;
-                toast.info('로그아웃을 성공했습니다.');
                 state.userData = initialState.userData; //initialState의 userData에 payload를 넣어줌
                 state.isAuth = false; //현재 로그아웃 상태
                 localStorage.removeItem('accessToken'); //받은 accessToken을 삭제
+                toast.info('로그아웃을 성공했습니다.');
             })
             .addCase(logoutUser.rejected, (state, action) => {
                 state.isLoading = false;
-                state.error = action.payload; //상단의 initialSate의 error에 payload를 넣어줌
-                toast.error(action.payload);
+                toast.error("실패");
+                state.error = "실패"; //상단의 initialSate의 error에 payload를 넣어줌
             })
     }
 })
 
-export default userSlice; //index.js에서 userReducer로 import하고, redux store를 생성
+export default userSlice.reducer; //index.js에서 userReducer로 import하고, redux store를 생성

@@ -56,6 +56,7 @@ main .helper span {
     font-weight: 500;
     font-size: 18px;
     font-family: 'KimjungchulGothic-Bold';
+    text-decoration: none;
 }
 
 .menu .avatar {
@@ -111,7 +112,7 @@ main .helper span {
     background-image: url("https://www.magazinetalk.co.kr/contents/images/mypage.png");
 }
 .menu ul li.icon-info {
-    margin-top: 35vh;
+    margin-top: 25vh;
     background-image: url("https://icon-library.com/images/info-icon-png/info-icon-png-26.jpg");
 }
 .menu ul li.icon-out {

@@ -104,7 +104,7 @@ function Login () {
 
           <button 
             className='login' 
-            type="button" 
+            type="submit"
           >
             로그인
           </button>

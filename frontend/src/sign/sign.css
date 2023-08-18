@@ -24,10 +24,10 @@
 
 
 .page {
-    margin-top: 12vh;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
+    margin-left: 24vw;
     
 }
 
@@ -35,6 +35,8 @@
     font-size: 50px;
     font-weight: 200;
     font-family:'bitbit';
+    margin-left: -20vw;
+    margin-top: 5vh;
 }
 
 .contentWrap {
@@ -64,6 +66,7 @@
     margin-top: 1vh;
     background-color: white;
     border: 2px solid grey;
+    margin-left: 12vw;
 }
 
 .inputWrap:focus-within {
@@ -102,20 +105,6 @@ input::placeholder {
     background-color:  #cf6947;
 }
 
-/* .goButton {
-    width: 20vw;
-    height: 7vh;
-    font-size: 20px;
-    border-color: rgb(68, 66, 63);
-    border-radius: 20px;
-    margin-top: 3vh;
-    background-color: black;
-    color: aliceblue;
-    font-family:'bitbit';
-    padding: 1%;
-    cursor: pointer;
-} */
-
 .HomeBtn {
     width: 15vw;
     height: 5vh;
@@ -124,6 +113,7 @@ input::placeholder {
     border-color: rgb(227, 205, 178);
     border-radius: 20px;
     margin-top: 2.4vh;
+    margin-left: 19vw;
     background-color: black;
     color: white;
     font-family:'bitbit';
@@ -138,15 +128,3 @@ input::placeholder {
 .inputbox{
     background-color: #fde0d6;
   }
-
-/* .signinBtn{
-    margin-top: 2vh;
-    font-size: 15px;
-    background-color:  #cf6947;
-    cursor: pointer;
-    font-family: 'KimjungchulGothic-Bold';
-}
-
-.signinBtn:hover {
-    background-color:  #cf6947;
-} */
