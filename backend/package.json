@@ -1,11 +1,14 @@
 {
+  "hompage": "https://yelynlee.github.io/hackerton2023_2/",
   "name": "backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run dev",
+    "deploy": "gh-pages -d dev"
   },
   "author": "",
   "license": "ISC",
